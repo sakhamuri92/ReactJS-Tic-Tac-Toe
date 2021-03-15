@@ -1,38 +1,27 @@
-.App {
+.SimpleTicTacToe {
   text-align: center;
+  background-color: #f87060;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+table {
+  margin: 0 auto;
+}
+td {
+  width: 150px;
+  height: 150px;
+  border-right: 5px solid #ddd;
+  border-bottom: 5px solid #ddd;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+tr:last-child > td {
+  border-bottom: none;
+}
+td:last-child {
+  border-right:none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+td:hover {
+  background-color: blue;
+  cursor: pointer;
 }

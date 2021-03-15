@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import React,{ useState} from 'react'
+import Game from './components/Game';
+import './index.css'
+import BasicTicTacToe from './components/BasicTicTacToe';
 
 function App() {
+  const [toggleApp,setToggleApp] = useState(true);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <button onClick={() => setToggleApp(!toggleApp)}>{ toggleApp ? 'Simple Game': 'Game with steps'}</button>
+    <div>
+    { toggleApp ? <Game /> : <BasicTicTacToe />}
+    </div>
+   
+    {/* <BasicTicTacToe /> */}
     </div>
   );
 }
